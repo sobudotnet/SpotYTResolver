@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SpotYT</RootNamespace>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>spotyt.ico</ApplicationIcon>
+    <AssemblyName>SpotYT</AssemblyName>
+  </PropertyGroup>
+
+  <Target Name="OrganizeBuildOutput" AfterTargets="Build">
+    <ItemGroup>
+      <RuntimeDlls Include="$(OutputPath)*.dll" Exclude="$(OutputPath)SpotYT.dll" />
+      <ConfigFiles Include="$(OutputPath)*.config" />
+    </ItemGroup>
+    
+    <MakeDir Directories="$(OutputPath)res" Condition="!Exists('$(OutputPath)res')" />
+    <MakeDir Directories="$(OutputPath)cfg" Condition="!Exists('$(OutputPath)cfg')" />
+    
+    <Move SourceFiles="@(RuntimeDlls)" DestinationFolder="$(OutputPath)res" />
+    <Move SourceFiles="@(ConfigFiles)" DestinationFolder="$(OutputPath)cfg" />
+  </Target>
+
+  <ItemGroup>
+    <Content Include="spotyt.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.61" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SpotifyAPI.Web" Version="7.2.1" />
+    <PackageReference Include="SpotifyAPI.Web.Auth" Version="7.2.1" />
+  </ItemGroup>
+
+</Project>
