@@ -131,7 +131,7 @@ Public Class MainForm
             .Text = "Spotify YouTube Resolver",
             .Font = New Font("Segoe UI", 9),
             .AutoSize = True,
-            .Location = New Point(25, 42),
+            .Location = New Point(25, 50),
             .ForeColor = Color.FromArgb((TEXT_SECONDARY >> 16) And &HFF, (TEXT_SECONDARY >> 8) And &HFF, TEXT_SECONDARY And &HFF)
         }
         Me.Controls.Add(lblSubtitle)
@@ -141,14 +141,14 @@ Public Class MainForm
             .Text = "Drag a Spotify link here or paste it below to find it on YouTube",
             .Font = New Font("Segoe UI", 10),
             .AutoSize = True,
-            .Location = New Point(25, 65),
+            .Location = New Point(25, 73),
             .ForeColor = Color.FromArgb((TEXT_SECONDARY >> 16) And &HFF, (TEXT_SECONDARY >> 8) And &HFF, TEXT_SECONDARY And &HFF)
         }
         Me.Controls.Add(lblInstruction)
 
         ' url input box
         txtSpotifyUrl = New TextBox With {
-            .Location = New Point(25, 95),
+            .Location = New Point(25, 103),
             .Size = New Size(750, 45),
             .Font = New Font("Segoe UI", 11),
             .BackColor = Color.FromArgb((CARD_BG >> 16) And &HFF, (CARD_BG >> 8) And &HFF, CARD_BG And &HFF),
@@ -162,7 +162,7 @@ Public Class MainForm
         ' search button
         btnSearch = New Button With {
             .Text = "Search on YouTube",
-            .Location = New Point(785, 95),
+            .Location = New Point(785, 103),
             .Size = New Size(190, 45),
             .Font = New Font("Segoe UI", 11, FontStyle.Bold),
             .BackColor = Color.FromArgb((YOUTUBE_RED >> 16) And &HFF, (YOUTUBE_RED >> 8) And &HFF, YOUTUBE_RED And &HFF),
