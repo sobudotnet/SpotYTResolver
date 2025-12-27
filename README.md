@@ -1,6 +1,6 @@
 ﻿# SpotYT
 
-Spotify YouTube Resolver - Find your Spotify songs on YouTube instantly. Just drag a Spotify link in and boom, YouTube results.
+Spotify YouTube Resolver Using SpotifyAPI - Find your Spotify songs on YouTube instantly. Just drag a Spotify link in and boom, YouTube results.
 
 ## Getting Started (Super Easy)
 
