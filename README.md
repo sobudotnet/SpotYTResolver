@@ -68,7 +68,6 @@ Done. That's literally the whole thing.
 | Says credentials aren't set up | Just run the in-app setup or the batch script |
 | Can't find the song you want | Try searching a different way or check your internet |
 | Album art isn't showing | Probably a connection thing - app works fine without it anyway |
-| Icon looks weird | Make sure `spotyt.ico` is in the app folder and rebuild |
 
 ## How It Works (If You Care)
 
