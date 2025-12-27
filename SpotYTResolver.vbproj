@@ -7,7 +7,27 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>spotyt.ico</ApplicationIcon>
     <AssemblyName>SpotYT</AssemblyName>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <PublishTrimmed>false</PublishTrimmed>
+    <PublishSingleFile>false</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>false</IncludeNativeLibrariesForSelfExtract>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
+
+  <Target Name="CleanPublishOutput" AfterTargets="Publish">
+    <ItemGroup>
+      <FilesToDelete Include="$(PublishDir)*.pdb" />
+      <FilesToDelete Include="$(PublishDir)createdump.exe" />
+      <FilesToDelete Include="$(PublishDir)createdump.exe.dbg" />
+      <FilesToDelete Include="$(PublishDir)*.dbg" />
+      <FilesToDelete Include="$(PublishDir)mscordaccore.dll" />
+      <FilesToDelete Include="$(PublishDir)mscordbi.dll" />
+    </ItemGroup>
+    <Delete Files="@(FilesToDelete)" />
+  </Target>
 
   <Target Name="OrganizeBuildOutput" AfterTargets="Build">
     <ItemGroup>
