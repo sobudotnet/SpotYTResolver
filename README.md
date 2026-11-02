@@ -37,14 +37,6 @@ Pick whichever sounds easiest:
    ```
 3. Save and restart
 
-### Step 3: Use It
-
-1. Open the app
-2. Drag a Spotify link into the text box (or just paste it)
-3. Check out the YouTube results with album art and everything
-4. Click "Open" to watch it on YouTube or "Copy" to grab the link
-
-Done. That's literally the whole thing.
 
 ## What Spotify Links Work?
 
@@ -52,22 +44,13 @@ Done. That's literally the whole thing.
 - `spotify:track:...` (desktop app)
 - Any share link from Spotify
 
-## Cool Stuff It Does
-
-- Drag & drop straight from spotify (super convenient)
-- Actually gets real song info from Spotify
-- Shows you the top 10 YouTube results
-- Dark theme (easy on the eyes)
-- Doesn't spy on you or track anything
-- Works offline after you paste a link (well, for the search part)
-
 ## Something Broke?
 
-| What's Wrong | How to Fix It |
-|---------|----------|
-| Says credentials aren't set up | Just run the in-app setup or the batch script |
-| Can't find the song you want | Try searching a different way or check your internet |
-| Album art isn't showing | Probably a connection thing - app works fine without it anyway |
+ What's Wrong / How to Fix It 
+
+ Says credentials aren't set up  Just run the in-app setup or the batch script 
+ Can't find the song you want  Try searching a different way or check your internet 
+ Album art isn't showing  Probably a connection thing - app works fine without it anyway 
 
 ## How It Works (If You Care)
 
@@ -81,8 +64,6 @@ What it doesn't do:
 - Require accounts
 - Collect data
 - Track you
-
-## The Code
 
 Everything's in the `SpotYTResolver/` folder. Main stuff:
 - `MainForm.vb` - the UI and main logic
